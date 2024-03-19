@@ -9,7 +9,9 @@ module.exports = {
     extend: {
       colors: {
         primary: Colors.Cinder,
-        secondary: Colors.Gamboge
+        secondary: Colors.Gamboge,
+        tertiory: Colors.Flame,
+        extraPrimary: Colors.Sunset
       },
     },
   },

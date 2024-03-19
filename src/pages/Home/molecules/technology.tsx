@@ -19,7 +19,7 @@ const Technology = () => {
         <span className="text-secondary">Services</span> We’re Providing To Our
         Customers
       </div>
-      <img src={image} width={'100%'}/>
+      <img src={image} width={'100%'} alt="tech"/>
     </div>
   );
 };

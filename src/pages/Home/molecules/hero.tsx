@@ -8,12 +8,12 @@ const Hero = () => {
         <div className="text-7xl leading-[94px]">More than just a development agency</div>
         <div className="text-2xl mt-7 mb-8">
           TAILORING YOURSOFTWARE NEEDS WITH BRILLIANT
-          <span className="text-secondary">BRAINS</span>
+          <span className="text-tertiory">{" "}BRAINS</span>
         </div>
         <Button onClick={() => {}} buttonText="Hire Now" />
       </div>
       <div className="w-[420px] h-[684px]">
-        <img src={image} width={'100%'} height={'100%'}/>
+        <img src={image} width={'100%'} height={'100%'} alt="hero"/>
       </div>
     </div>
   );

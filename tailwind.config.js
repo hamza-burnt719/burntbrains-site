@@ -1,4 +1,4 @@
-const { colors } = require('./utils/colors');
+const { Colors } = require('./src/utils/colors');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: colors.Cinder,
-        secondary: colors.Gamboge
+        primary: Colors.Cinder,
+        secondary: Colors.Gamboge
       },
     },
   },

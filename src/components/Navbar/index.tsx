@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <header>
       <nav>
-        <ul className="flex gap-8 justify-end pt-10 font-medium text-sm">
+        <ul className="flex gap-8 justify-end pt-10 pr-24 font-medium text-sm">
           <li>
             <NavLink to="/about">About me</NavLink>
           </li>

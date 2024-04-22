@@ -11,7 +11,11 @@ module.exports = {
         primary: Colors.Cinder,
         secondary: Colors.Gamboge,
         tertiory: Colors.Flame,
-        extraPrimary: Colors.Sunset
+        extraPrimary: Colors.Sunset,
+        extraTertiory: Colors.SpanishYellow,
+        extraSecondary : Colors.MiddlePurple,
+        eeTertiory : Colors.Gainsboro,
+        eeSecondary : Colors.QuickSilver
       },
     },
   },

@@ -3,7 +3,7 @@ import image from "assets/images/technology.png"
 
 const Technology = () => {
   return (
-    <div className="text-center px-10">
+    <div className="text-center px-32">
       <div className="flex items-center justify-center">
         <svg width={20} height={20}>
           <circle

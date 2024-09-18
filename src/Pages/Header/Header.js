@@ -1,5 +1,6 @@
 import React from "react";
 import { AppBar, Toolbar, Button } from "@mui/material";
+import { scroller } from "react-scroll";
 import Logo from "../../Assets/logo.png";
 
 const buttonStyle = {
@@ -27,6 +28,13 @@ const buttonStyle = {
 };
 
 const Header = () => {
+  const handleScrollTo = (section) => {
+    scroller.scrollTo(section, {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+    });
+  };
   return (
     <AppBar
       position="static"
@@ -38,25 +46,25 @@ const Header = () => {
     >
       <Toolbar>
         <div style={{ flexGrow: 1 }}>
-          <img src={Logo} alt="Burnt Brains" style={{ width: "150px" }} />
+          <img src={Logo} alt="Burnt Brains" style={{ width: "150px" }} onClick={() => handleScrollTo('homepage')}/>
         </div>
         <div style={{ flexGrow: 1 }}>
-          <Button color="inherit" sx={buttonStyle}>
+          <Button color="inherit" sx={buttonStyle} onClick={() => handleScrollTo('homepage')}>
             Home
           </Button>
-          <Button color="inherit" sx={buttonStyle}>
+          <Button color="inherit" sx={buttonStyle} onClick={() => handleScrollTo('team')}>
             Our Team
           </Button>
-          <Button color="inherit" sx={buttonStyle}>
+          <Button color="inherit" sx={buttonStyle} onClick={() => handleScrollTo('services')}>
             Services
           </Button>
-          <Button color="inherit" sx={buttonStyle}>
+          <Button color="inherit" sx={buttonStyle} onClick={() => handleScrollTo('projects')}>
             Projects
           </Button>
-          <Button color="inherit" sx={buttonStyle}>
+          <Button color="inherit" sx={buttonStyle}  onClick={() => handleScrollTo('testimonials')}>
             Testimonials
           </Button>
-          <Button color="inherit" sx={buttonStyle}>
+          <Button color="inherit" sx={buttonStyle} onClick={() => handleScrollTo('contact')}>
             Contact Us
           </Button>
         </div>

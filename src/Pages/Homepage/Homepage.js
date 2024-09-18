@@ -1,14 +1,17 @@
 import React from "react";
-import { Typography, Button, Container, Box } from "@mui/material";
+import { Grid, Typography, Button, Container, Box } from "@mui/material";
 import image from "../../Assets/box3.png";
 import Header from "../Header/Header";
+import TeamMember from "../Team/TeamMember";
+import HamzaAlvi from "../../Assets/Team/Hamza Alvi.jpeg";
+import HassanAlvi from "../../Assets/Team/Hassan Alvi.jpeg";
 
 const HomePage = () => {
   return (
     <div
       style={{
         position: "relative",
-        height: "80vh",
+        height: "100%",
         overflow: "hidden",
       }}
     >
@@ -21,10 +24,10 @@ const HomePage = () => {
           bottom: 0,
           backgroundImage: `url(${image})`,
           backgroundSize: "cover",
-        //   backgroundPosition: "center",
+          //   backgroundPosition: "center",
           filter: "blur(8px)",
           zIndex: -1,
-          height: "100%",
+          height: "79vh",
           width: "100%",
         }}
       ></div>
@@ -48,8 +51,8 @@ const HomePage = () => {
           }}
         >
           <Container>
-            <Typography variant="h3" >
-              <span style={{color:"#FF5722"}}>Burnt</span> Brains
+            <Typography variant="h3">
+              <span style={{ color: "#FF5722" }}>Burnt</span> Brains
             </Typography>
             <Typography
               variant="h5"
@@ -66,10 +69,10 @@ const HomePage = () => {
             <Button
               variant="outlined"
               sx={{
-                padding:"0.75rem 2rem",
-                marginTop:"30px",
+                padding: "0.75rem 2rem",
+                marginTop: "30px",
                 color: "#fff",
-                borderRadius:"35px",
+                borderRadius: "35px",
                 border: "2px solid #fff",
                 "&:hover": {
                   variant: "contained",
@@ -127,6 +130,23 @@ const HomePage = () => {
           </svg>
         </div>
       </div>
+      <Container sx={{ mt: 2, textAlign: "center" }}>
+        <Typography variant="h3">
+          <span style={{ color: "#FF5722" }}>Co</span>Founders
+        </Typography>
+        <Grid container mt={1} spacing={3} justifyContent="center">
+          <TeamMember
+            image={HamzaAlvi}
+            name={"Muhammad Hamza Alvi"}
+            position={"CO Founder"}
+          />
+          <TeamMember
+            image={HassanAlvi}
+            name={"Muhammad Hassan Alvi"}
+            position={"CO Founder"}
+          />
+        </Grid>
+      </Container>
     </div>
   );
 };

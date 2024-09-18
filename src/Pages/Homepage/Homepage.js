@@ -3,8 +3,8 @@ import { Grid, Typography, Button, Container, Box } from "@mui/material";
 import image from "../../Assets/box3.png";
 import Header from "../Header/Header";
 import TeamMember from "../Team/TeamMember";
-import HamzaAlvi from "../../Assets/Team/Hamza Alvi.jpeg";
-import HassanAlvi from "../../Assets/Team/Hassan Alvi.jpeg";
+import HamzaAlvi from "../../Assets/Hamza Alvi.jpeg";
+import HassanAlvi from "../../Assets/Hassan Alvi.jpeg";
 
 const HomePage = () => {
   return (

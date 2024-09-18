@@ -1,6 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 body {
   margin: 0;
   background: #000;
-  color:#fff;
-  
+  color: #fff;
+  font-family: "Work Sans";
+}
+.waves-wrapper {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  margin-top: -137px;
+  overflow: hidden;
+}
+
+.waves {
+  position: relative;
+    width: 100%;
+    height: 15vh;
+    min-height: 150px;
+    max-height: 150px;
+}
+
+.parallax > use {
+  animation: moveWaves 15s linear infinite;
+}
+
+@keyframes moveWaves {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
 }

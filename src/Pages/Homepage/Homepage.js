@@ -3,8 +3,8 @@ import { Grid, Typography, Button, Container, Box } from "@mui/material";
 import image from "../../Assets/box3.png";
 import Header from "../Header/Header";
 import TeamMember from "../Team/TeamMember";
-import HamzaAlvi from "../../Assets/Team/Hamza Alvi.jpeg";
-import HassanAlvi from "../../Assets/Team/Hassan Alvi.jpeg";
+import HamzaAlvi from "../../Assets/hamza_alvi.jpeg";
+import HasanAlvi from "../../Assets/hasan_alvi.jpeg";
 
 const HomePage = () => {
   return (
@@ -24,7 +24,6 @@ const HomePage = () => {
           bottom: 0,
           backgroundImage: `url(${image})`,
           backgroundSize: "cover",
-          //   backgroundPosition: "center",
           filter: "blur(8px)",
           zIndex: -1,
           height: "79vh",
@@ -141,8 +140,8 @@ const HomePage = () => {
             position={"CO Founder"}
           />
           <TeamMember
-            image={HassanAlvi}
-            name={"Muhammad Hassan Alvi"}
+            image={HasanAlvi}
+            name={"Muhammad Hasan Alvi"}
             position={"CO Founder"}
           />
         </Grid>

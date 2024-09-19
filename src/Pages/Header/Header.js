@@ -6,7 +6,7 @@ import Logo from "../../Assets/logo.png";
 const buttonStyle = {
   position: "relative",
   overflow: "hidden",
-  fontWeight:"500",
+  fontWeight: "500",
   marginRight: "5px",
   "&::before": {
     content: '""',
@@ -32,7 +32,7 @@ const Header = () => {
     scroller.scrollTo(section, {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart',
+      smooth: "easeInOutQuart",
     });
   };
   return (
@@ -46,25 +46,61 @@ const Header = () => {
     >
       <Toolbar>
         <div style={{ flexGrow: 1 }}>
-          <img src={Logo} alt="Burnt Brains" style={{ width: "150px" }} onClick={() => handleScrollTo('homepage')}/>
+          <img
+            src={Logo}
+            alt="Burnt Brains"
+            style={{ width: "150px" }}
+            onClick={() => handleScrollTo("homepage")}
+          />
         </div>
         <div style={{ flexGrow: 1 }}>
-          <Button color="inherit" sx={buttonStyle} onClick={() => handleScrollTo('homepage')}>
+          <Button
+            color="inherit"
+            sx={buttonStyle}
+            onClick={() => handleScrollTo("homepage")}
+          >
             Home
           </Button>
-          <Button color="inherit" sx={buttonStyle} onClick={() => handleScrollTo('team')}>
-            Our Team
-          </Button>
-          <Button color="inherit" sx={buttonStyle} onClick={() => handleScrollTo('services')}>
+          <Button
+            color="inherit"
+            sx={buttonStyle}
+            onClick={() => handleScrollTo("services")}
+          >
             Services
           </Button>
-          <Button color="inherit" sx={buttonStyle} onClick={() => handleScrollTo('projects')}>
+          <Button
+            color="inherit"
+            sx={buttonStyle}
+            onClick={() => handleScrollTo("projects")}
+          >
             Projects
           </Button>
-          <Button color="inherit" sx={buttonStyle}  onClick={() => handleScrollTo('testimonials')}>
+          <Button
+            color="inherit"
+            sx={buttonStyle}
+            onClick={() => handleScrollTo("testimonials")}
+          >
             Testimonials
           </Button>
-          <Button color="inherit" sx={buttonStyle} onClick={() => handleScrollTo('contact')}>
+          <Button
+            color="inherit"
+            sx={buttonStyle}
+            onClick={() => handleScrollTo("team")}
+          >
+            Our Team
+          </Button>
+          <Button
+            color="inherit"
+            sx={buttonStyle}
+            onClick={() => handleScrollTo("clients")}
+          >
+            Our Clients
+          </Button>
+          <Button
+            color="inherit"
+            sx={buttonStyle}
+            onClick={() => handleScrollTo("contact")}
+          >
             Contact Us
           </Button>
         </div>

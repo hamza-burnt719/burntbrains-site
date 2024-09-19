@@ -1,12 +1,32 @@
 import React from "react";
 import { Grid, Typography, Button, Container, Box } from "@mui/material";
+import { scroller } from "react-scroll";
 import image from "../../Assets/box3.png";
 import Header from "../Header/Header";
 import TeamMember from "../Team/TeamMember";
-import HamzaAlvi from "../../Assets/hamza_alvi.jpeg";
-import HasanAlvi from "../../Assets/hasan_alvi.jpeg";
+import hamzaAlvi from "../../Assets/hamza_alvi.png";
+import hasanAlvi from "../../Assets/hasan_alvi.png";
 
 const HomePage = () => {
+  const handleScrollTo = (section) => {
+    scroller.scrollTo(section, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  };
+  const teamMembers = [
+    {
+      image: hasanAlvi,
+      name: "Muhammad Hasan Alvi",
+      position: "Co-Founder",
+    },
+    {
+      image: hamzaAlvi,
+      name: "Muhammad Hamza Alvi",
+      position: "Co-Founder",
+    },
+  ];
   return (
     <div
       style={{
@@ -24,7 +44,7 @@ const HomePage = () => {
           bottom: 0,
           backgroundImage: `url(${image})`,
           backgroundSize: "cover",
-          filter: "blur(8px)",
+          filter: "blur(3px)",
           zIndex: -1,
           height: "79vh",
           width: "100%",
@@ -51,13 +71,19 @@ const HomePage = () => {
         >
           <Container>
             <Typography variant="h3">
-              <span style={{ color: "#FF5722" }}>Burnt</span> Brains
+              <b>
+                <span style={{ color: "#FF5722" }}>Burnt</span> Brains
+              </b>
             </Typography>
             <Typography
               variant="h5"
               style={{ color: "white", marginTop: "10px" }}
             >
-              <b>Our business is helping you grow your business</b>
+              <b>
+                <span style={{ color: "#FF5722" }}>Tailoring</span> Your
+                Software Needs With{" "}
+                <span style={{ color: "#FF5722" }}>Brilliant</span> Brains
+              </b>
             </Typography>
             <Typography
               variant="subtitle1"
@@ -67,6 +93,7 @@ const HomePage = () => {
             </Typography>
             <Button
               variant="outlined"
+              onClick={() => handleScrollTo("services")}
               sx={{
                 padding: "0.75rem 2rem",
                 marginTop: "30px",
@@ -134,16 +161,9 @@ const HomePage = () => {
           <span style={{ color: "#FF5722" }}>Co</span>Founders
         </Typography>
         <Grid container mt={1} spacing={3} justifyContent="center">
-          <TeamMember
-            image={HamzaAlvi}
-            name={"Muhammad Hamza Alvi"}
-            position={"CO Founder"}
-          />
-          <TeamMember
-            image={HasanAlvi}
-            name={"Muhammad Hasan Alvi"}
-            position={"CO Founder"}
-          />
+          {teamMembers.map((member, index) => (
+            <TeamMember key={index} team={member} />
+          ))}
         </Grid>
       </Container>
     </div>

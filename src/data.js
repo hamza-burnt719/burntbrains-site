@@ -30,6 +30,15 @@ import cona from "./Assets/clients/cona.png";
 import zucchetti from "./Assets/clients/zucchetti.png";
 import visual_lime from "./Assets/clients/visual_lime.png";
 import mortgage_centre from "./Assets/clients/mortgage_centre.png";
+import assembly_industries from "./Assets/clients/assembly_industries.png";
+import greater from "./Assets/clients/greater.png";
+import prodege from "./Assets/clients/prodege.png";
+import locaided from "./Assets/clients/locaided.png";
+import felipe from "./Assets/clients/felipe.png";
+import fyllo from "./Assets/clients/fyllo.png";
+import stratus from "./Assets/clients/stratus.png";
+import innovative from "./Assets/clients/innovative.png";
+import koda_health from "./Assets/clients/koda_health.png";
 
 // Team members array
 const teamData = [
@@ -164,6 +173,42 @@ const clients = [
   {
     logo: mortgage_centre,
     name: "Mortgage Centre",
+  },
+  {
+    logo: assembly_industries,
+    name: "Assembly Industries",
+  },
+  {
+    logo: greater,
+    name: "Greater",
+  },
+  {
+    logo: koda_health,
+    name: "Koda Health",
+  },
+  {
+    logo: prodege,
+    name: "Prodege",
+  },
+  {
+    logo: locaided,
+    name: "Locaided",
+  },
+  {
+    logo: felipe,
+    name: "Felipe",
+  },
+  {
+    logo: fyllo,
+    name: "Fyllo",
+  },
+  {
+    logo: stratus,
+    name: "Stratus",
+  },
+  {
+    logo: innovative,
+    name: "Innovative",
   },
 ];
 

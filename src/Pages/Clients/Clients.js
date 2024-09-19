@@ -38,10 +38,10 @@ const Clients = () => {
 
   return (
     <Container sx={{ mt: 2, textAlign: "center" }}>
-      <Typography variant="h3" mb={6}>
+      <Typography variant="h3">
         <span style={{ color: "#FF5722" }}>Our</span> Clients
       </Typography>
-      <div>
+      <div style={{ position: "relative" }}>
         <Slider {...settings}>
           {clients.map((client, index) => (
             <div key={index}>
@@ -49,6 +49,14 @@ const Clients = () => {
             </div>
           ))}
         </Slider>
+        <style>
+          {`
+            .slick-prev,
+            .slick-next {
+              display: none !important;
+            }
+          `}
+        </style>
       </div>
     </Container>
   );

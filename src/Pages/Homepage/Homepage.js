@@ -131,32 +131,32 @@ const HomePage = () => {
               <use
                 xlinkHref="#gentle-wave"
                 x="98"
-                y="0"
-                fill="rgba(0, 0, 0, 0.8)"
+                y="3"
+                fill="rgba(5, 5, 5, 0.8)"
               />
               <use
                 xlinkHref="#gentle-wave"
                 x="40"
                 y="3"
-                fill="rgba(17, 17, 17, 0.8)"
+                fill="rgba(5, 5, 5, 0.8)"
               />
               <use
                 xlinkHref="#gentle-wave"
                 x="75"
                 y="5"
-                fill="rgba(24, 24, 24, 0.8)"
+                fill="rgba(5, 5, 5, 0.8)"
               />
               <use
                 xlinkHref="#gentle-wave"
                 x="49"
-                y="7"
-                fill="rgba(31, 31, 31, 0.8)"
+                y="10"
+                fill="rgba(5, 5, 5, 0.8)"
               />
             </g>
           </svg>
         </div>
       </div>
-      <Container sx={{ mt: 2, textAlign: "center" }}>
+      <Container sx={{ mt: 3, textAlign: "center" }}>
         <Typography variant="h3">
           <span style={{ color: "#FF5722" }}>Co</span>Founders
         </Typography>

@@ -40,6 +40,23 @@ import stratus from "./Assets/clients/stratus.png";
 import innovative from "./Assets/clients/innovative.png";
 import koda_health from "./Assets/clients/koda_health.png";
 
+// Import client logos
+import salesforce from "./Assets/Services/salesforce.png";
+import rails from "./Assets/Services/rails.png";
+import pardot from "./Assets/Services/pardot.png";
+import mern from "./Assets/Services/mern.png";
+import hubspot from "./Assets/Services/hubspot.png";
+import zoho from "./Assets/Services/zoho.png";
+import power from "./Assets/Services/power.png";
+
+//Import Certifications Logo
+import professional from "./Assets/Certifications/professional.png";
+import developer_1 from "./Assets/Certifications/developer_1.png";
+import developer_2 from "./Assets/Certifications/developer_2.png";
+import administrator from "./Assets/Certifications/administrator.png";
+import app_builder from "./Assets/Certifications/app_builder.png";
+import associate from "./Assets/Certifications/associate.png";
+
 // Team members array
 const teamData = [
   {
@@ -212,4 +229,65 @@ const clients = [
   },
 ];
 
-export { teamData, clients };
+//Services Data
+const services = [
+  {
+    logo: salesforce,
+    title: "SalesForce",
+  },
+  {
+    logo: rails,
+    title: "Ruby On Rails",
+  },
+  {
+    logo: pardot,
+    title: "SalesForce Pardot",
+  },
+  {
+    logo: power,
+    title: "Power BI",
+  },
+  {
+    logo: mern,
+    title: "MERN Stack",
+  },
+  {
+    logo: hubspot,
+    title: "HubSpot",
+  },
+  {
+    logo: zoho,
+    title: "ZOHO",
+  },
+];
+
+// Certifications Data
+
+const certifications = [
+  {
+    logo: professional,
+    name: "Professional",
+  },
+  {
+    logo: developer_1,
+    name: "Developer I",
+  },
+  {
+    logo: developer_2,
+    name: "Developer II",
+  },
+  {
+    logo: administrator,
+    name: "Administrator",
+  },
+  {
+    logo: app_builder,
+    name: "App Builder",
+  },
+  {
+    logo: associate,
+    name: "Associate",
+  },
+];
+
+export { teamData, clients, services, certifications };

@@ -9,6 +9,7 @@ import Contact from "./Pages/Contact/Contact";
 import Clients from "./Pages/Clients/Clients";
 import Projects from "./Pages/Projects/Projects";
 import Footer from "./Pages/Footer/Footer";
+import Certifications from "./Pages/Certifications/Certifications";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         </Element>
         <Element name="services" className="element">
           <Services />
+          <Certifications />
         </Element>
         <Element name="projects" className="element">
           <Projects />

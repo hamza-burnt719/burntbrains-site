@@ -39,7 +39,8 @@ const Certifications = () => {
   return (
     <Container sx={{ mt: 3, textAlign: "center" }}>
       <Typography variant="h3" mb={2}>
-        <span style={{ color: "#FF5722" }}>Our</span> Certifications
+        <span style={{ color: "#FF5722", fontWeight: "bold" }}>Our</span>{" "}
+        Certifications
       </Typography>
       <div style={{ position: "relative" }}>
         <Slider {...settings}>

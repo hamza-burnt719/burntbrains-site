@@ -7,7 +7,8 @@ const Services = () => {
   return (
     <Container sx={{ mt: 3, textAlign: "center" }}>
       <Typography variant="h3">
-        <span style={{ color: "#FF5722" }}>Our</span> Services
+        <span style={{ color: "#FF5722", fontWeight: "bold" }}>Our</span>{" "}
+        Services
       </Typography>
       <Grid container mt={1} spacing={3} justifyContent="center">
         {services.map((service, index) => (

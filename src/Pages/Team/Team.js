@@ -7,7 +7,8 @@ const Team = () => {
   return (
     <Container sx={{ mt: 2, textAlign: "center" }}>
       <Typography variant="h3">
-        <span style={{ color: "#FF5722" }}>Team</span> Members
+        <span style={{ color: "#FF5722", fontWeight: "bold" }}>Team</span>{" "}
+        Members
       </Typography>
       <Grid container mt={1} spacing={3} justifyContent="center">
         {teamData.map((member, index) => (

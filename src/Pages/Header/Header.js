@@ -67,13 +67,13 @@ const Header = () => {
         <AppBar
           position="fixed"
           style={{
-            backgroundColor: "transparent",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
             boxShadow: "none",
-            marginTop: "5px",
+            marginTop: 0,
           }}
         >
-          <Toolbar>
-            <div style={{ flexGrow: 1 }}>
+          <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+            <div>
               <img
                 src={Logo}
                 alt="Burnt Brains"
@@ -81,7 +81,7 @@ const Header = () => {
                 onClick={() => handleScrollTo("homepage")}
               />
             </div>
-            <div style={{ display: "flex", flexGrow: 1 }}>
+            <div>
               <Button
                 color="inherit"
                 sx={buttonStyle}
@@ -95,13 +95,6 @@ const Header = () => {
                 onClick={() => handleScrollTo("services")}
               >
                 Services
-              </Button>
-              <Button
-                color="inherit"
-                sx={buttonStyle}
-                onClick={() => handleScrollTo("projects")}
-              >
-                Projects
               </Button>
               <Button
                 color="inherit"
@@ -138,13 +131,13 @@ const Header = () => {
         <AppBar
           position="fixed"
           style={{
-            backgroundColor: "transparent",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
             boxShadow: "none",
-            marginTop: "5px",
+            marginTop: 0,
           }}
         >
-          <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-            <div style={{ flexGrow: 1 }}>
+          <Box sx={{ px: 1, display: "flex", justifyContent: "space-between" }}>
+            <div>
               <img
                 src={Logo}
                 alt="Burnt Brains"
@@ -152,19 +145,15 @@ const Header = () => {
                 onClick={() => handleScrollTo("homepage")}
               />
             </div>
-            <IconButton
-              color="inherit"
-              onClick={toggleDrawer(true)}
-              sx={{ display: { xs: "block", md: "block" } }}
-            >
-              <MenuIcon />
+            <IconButton color="inherit" onClick={toggleDrawer(true)}>
+              <MenuIcon sx={{ fontSize: "36px" }} />
             </IconButton>
           </Box>
         </AppBar>
       )}
 
       <Drawer anchor="top" open={drawerOpen} onClose={toggleDrawer(false)}>
-        <div style={{ flexGrow: 1, backgroundColor: "#28282B" }}>
+        <div style={{ backgroundColor: "#28282B" }}>
           <img
             src={Logo}
             alt="Burnt Brains"
@@ -176,7 +165,6 @@ const Header = () => {
           {[
             "homepage",
             "services",
-            "projects",
             "testimonials",
             "team",
             "clients",

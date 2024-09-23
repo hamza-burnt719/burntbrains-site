@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Box, Grid, Typography, TextField, Button } from "@mui/material";
-import emailjs from "emailjs-com";
+import axios from "axios";
 
 const ContactPage = () => {
   const [animate, setAnimate] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,25 +21,21 @@ const ContactPage = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      alert("Please enter a valid email address.");
-      return;
+    setLoading(true);
+    try {
+      const res = await axios.post(
+        "https://api.burntbrains.com/contact",
+        formData
+      );
+      alert(res.data.message);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      alert(error.response.data.message || "An error occurred");
+    } finally {
+      setLoading(false);
     }
-    const userId = "PXbbvjNIg9VXwxr5Y";
-    const serviceID = "service_c4uo0t7";
-    const templateID = "template_kkmu9dl";
-    emailjs
-      .send(serviceID, templateID, formData, userId)
-      .then((response) => {
-        alert("Message sent successfully!", response.status, response.text);
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      })
-      .catch((error) => {
-        alert("Failed to send message. Please try again.", error);
-      });
   };
 
   return (
@@ -46,15 +43,14 @@ const ContactPage = () => {
       sx={{
         maxHeight: "100%",
         maxWidth: "100%",
-        textAlign: "center",
-        padding: "3rem",
+        padding: "1rem",
         backgroundColor: "#f9f9f9",
       }}
     >
-      <Typography variant="h3" pb={3} color="black">
+      <Typography variant="h3" textAlign="center" pb={3} color="black">
         <span style={{ color: "#FF5722", fontWeight: "bold" }}>Contact</span> Us
       </Typography>
-      <Grid container spacing={3} justifyContent="center" alignItems="center">
+      <Grid container spacing={5} justifyContent="center" alignItems="center">
         <Grid item xs={12} md={3}>
           <Box
             sx={{
@@ -86,13 +82,12 @@ const ContactPage = () => {
             <Typography variant="body2">hr@burntbrains.com</Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           <Box
             component="form"
             onSubmit={handleSubmit}
             sx={{
               backgroundColor: "#f9f9f9",
-              padding: "24px",
               borderRadius: "15px",
               transition: "transform 2s ease",
               transform: animate ? "translateX(0)" : "translateX(45%)",
@@ -159,6 +154,7 @@ const ContactPage = () => {
                 <Button
                   type="submit"
                   variant="contained"
+                  disabled={loading}
                   sx={{
                     backgroundColor: "#ff6b5b",
                     color: "#fff",
@@ -170,7 +166,7 @@ const ContactPage = () => {
                     },
                   }}
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </Button>
               </Grid>
             </Grid>

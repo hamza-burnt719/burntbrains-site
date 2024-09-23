@@ -58,7 +58,7 @@ const HomePage = () => {
           textAlign: "center",
         }}
       >
-        <Header />
+        <Header sx={{ backgroundColor: "transparent" }} />
         <Box
           style={{
             height: "75vh",
@@ -158,7 +158,8 @@ const HomePage = () => {
       </div>
       <Container sx={{ mt: 3, textAlign: "center" }}>
         <Typography variant="h3">
-          <span style={{ color: "#FF5722" }}>Co</span>Founders
+          <span style={{ color: "#FF5722", fontWeight: "bold" }}>Co</span>
+          Founders
         </Typography>
         <Grid container mt={1} spacing={3} justifyContent="center">
           {teamMembers.map((member, index) => (

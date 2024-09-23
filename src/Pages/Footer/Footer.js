@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Typography, IconButton, Link, Box } from "@mui/material";
-import { Instagram, WhatsApp, LinkedIn } from "@mui/icons-material";
+import { Instagram, LinkedIn } from "@mui/icons-material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
@@ -52,9 +52,6 @@ const Footer = () => {
               >
                 <Instagram />
               </IconButton>
-              <IconButton sx={{ color: "white" }}>
-                <WhatsApp />
-              </IconButton>
             </Box>
           </Box>
         </Grid>
@@ -72,7 +69,9 @@ const Footer = () => {
           </Typography>
           <Typography variant="body2" sx={{ mt: 1 }}>
             <Link
-              href="#"
+              href="https://maps.app.goo.gl/etomFPUJdKDyhKKy7"
+              target="_blank"
+              rel="noopener noreferrer"
               sx={{
                 color: "white",
                 textDecoration: "none",
@@ -86,13 +85,31 @@ const Footer = () => {
             <PhoneIcon
               sx={{ verticalAlign: "middle", mr: 1, color: "#FF5722" }}
             />
-            +92 306 0739353
+            <Link
+              href="tel:+923704707378"
+              sx={{
+                color: "white",
+                textDecoration: "none",
+                "&:hover": { textDecoration: "underline", color: "#FF5722" },
+              }}
+            >
+              +92 370 4707378
+            </Link>
           </Typography>
           <Typography variant="body2" sx={{ mt: 2 }}>
             <EmailIcon
               sx={{ verticalAlign: "middle", mr: 1, color: "#FF5722" }}
             />
-            hr@burntbrains.com
+            <Link
+              href="mailto:info@example.com"
+              sx={{
+                color: "white",
+                textDecoration: "none",
+                "&:hover": { textDecoration: "underline", color: "#FF5722" },
+              }}
+            >
+              hr@burntbrains.com
+            </Link>
           </Typography>
         </Grid>
       </Grid>

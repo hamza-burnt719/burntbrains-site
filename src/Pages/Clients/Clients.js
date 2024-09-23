@@ -39,7 +39,8 @@ const Clients = () => {
   return (
     <Container sx={{ mt: 2, textAlign: "center" }}>
       <Typography variant="h3">
-        <span style={{ color: "#FF5722" }}>Our</span> Clients
+        <span style={{ color: "#FF5722", fontWeight: "bold" }}>Our</span>{" "}
+        Clients
       </Typography>
       <div style={{ position: "relative" }}>
         <Slider {...settings}>

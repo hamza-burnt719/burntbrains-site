@@ -11,6 +11,7 @@ import hassan from "./Assets/hassan.png";
 import faizan from "./Assets/faizan.png";
 import tahir from "./Assets/tahir.png";
 import nouman from "./Assets/nouman.png";
+import laiba from "./Assets/laiba.png";
 
 // Import client logos
 import accu_ranker from "./Assets/clients/accu_ranker.png";
@@ -56,6 +57,8 @@ import developer_2 from "./Assets/Certifications/developer_2.png";
 import administrator from "./Assets/Certifications/administrator.png";
 import app_builder from "./Assets/Certifications/app_builder.png";
 import associate from "./Assets/Certifications/associate.png";
+
+//Import Testimonials Images
 
 // Team members array
 const teamData = [
@@ -113,6 +116,12 @@ const teamData = [
     image: talha,
     name: "Muhammad Talha",
     position: "Associate Full Stack Developer",
+  },
+
+  {
+    image: laiba,
+    name: "Laiba Aslam",
+    position: "HR Manager",
   },
   {
     image: hamza_jawad,
@@ -290,4 +299,48 @@ const certifications = [
   },
 ];
 
-export { teamData, clients, services, certifications };
+//Testimonials Data
+const testimonials = [
+  {
+    name: "Hasan Alvi",
+    title: "Managing Director",
+    image: hasanAlvi,
+    rating: 5,
+    testimonial:
+      "BurntBrains' dedication to our project was unmatched. Their team, led by Hasan, went above and beyond to ensure our satisfaction and delivered results that exceeded our expectations.",
+  },
+  {
+    name: "Hamza Alvi",
+    title: "Managing Director",
+    image: hamzaAlvi,
+    rating: 5,
+    testimonial:
+      "I was blown away by BurntBrains' software development services! Their team of experts, led by Hasan, listened closely to our needs and delivered customized solutions that exceeded our expectations.",
+  },
+  {
+    name: "Zeerik Raza",
+    title: "Marketing Consultant",
+    image: zeerik,
+    rating: 4,
+    testimonial:
+      "I cannot recommend BurntBrains enough! Their team, led by Amanda, provided exceptional software development services that have helped us streamline our operations and save on costs.",
+  },
+  {
+    name: "Nouman Latif",
+    title: "Managing Director",
+    image: nouman,
+    rating: 5,
+    testimonial:
+      "Working with BurntBrains has been a pleasure from start to finish. Their team, managed by Hasan, helped us improve customer experience and drive business growth through innovative software solutions.",
+  },
+  {
+    name: "Muhammad Rahim",
+    title: "CTO",
+    image: rahim,
+    rating: 5,
+    testimonial:
+      "BurntBrains has been a true partner in our digital transformation journey. Their remote talent, managed by Hasan, seamlessly integrated with our internal team to help us achieve our goals on time and within budget.",
+  },
+];
+
+export { teamData, clients, services, certifications, testimonials };

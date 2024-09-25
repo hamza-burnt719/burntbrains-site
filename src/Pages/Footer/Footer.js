@@ -67,7 +67,7 @@ const Footer = () => {
             4th floor, Building # 171, Sector C, CCA-1 Phase 6 DHA, Lahore,
             54000, Pakistan
           </Typography>
-          <Typography variant="body2" sx={{ mt: 1 }}>
+          <Typography variant="body2" sx={{ mt: 1, ml:4 }}>
             <Link
               href="https://maps.app.goo.gl/etomFPUJdKDyhKKy7"
               target="_blank"
@@ -97,17 +97,17 @@ const Footer = () => {
             </Link>
           </Typography>
           <Typography variant="body2" sx={{ mt: 2 }}>
-            <EmailIcon
-              sx={{ verticalAlign: "middle", mr: 1, color: "#FF5722" }}
-            />
             <Link
-              href="mailto:info@example.com"
+              href="mailto:hr@burntbrains.com"
               sx={{
                 color: "white",
                 textDecoration: "none",
                 "&:hover": { textDecoration: "underline", color: "#FF5722" },
               }}
             >
+              <EmailIcon
+                sx={{ verticalAlign: "middle", mr: 1, color: "#FF5722" }}
+              />
               hr@burntbrains.com
             </Link>
           </Typography>
@@ -115,36 +115,11 @@ const Footer = () => {
       </Grid>
 
       <Grid container px="10%" pt={3} justifyContent="center" spacing={5}>
-        <Grid item xs={12} md={6}>
-          <Typography variant="body2" fontWeight="bold">
+        <Grid item xs={12} md={12}>
+          <Typography variant="body2" textAlign="center" fontWeight="bold">
             <span style={{ color: "#FF5722" }}>Burnt Brains © 2022</span> -
             Designed by BurntBrains
           </Typography>
-        </Grid>
-
-        <Grid item xs={12} md={6}>
-          <Link
-            href="#"
-            sx={{
-              color: "white",
-              mr: 2,
-              textDecoration: "none",
-              "&:hover": { textDecoration: "underline" },
-            }}
-          >
-            Privacy Policy
-          </Link>
-          <Link
-            href="#"
-            sx={{
-              color: "white",
-              mr: 2,
-              textDecoration: "none",
-              "&:hover": { textDecoration: "underline" },
-            }}
-          >
-            Terms & Conditions
-          </Link>
         </Grid>
       </Grid>
     </Box>

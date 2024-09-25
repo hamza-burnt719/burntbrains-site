@@ -26,7 +26,7 @@ const TeamMember = (props) => {
           flexDirection: "column",
           alignItems: "center",
           margin: "1rem",
-          height: "35vh",
+          height: "40vh",
           padding: "20px",
           width: "300px",
           minHeight: "100%",
@@ -84,7 +84,6 @@ const TeamMember = (props) => {
           <Typography
             variant="body1"
             sx={{
-              // lineHeight: 1.5,
               fontStyle: "italic",
               fontFamily: "inherit",
             }}

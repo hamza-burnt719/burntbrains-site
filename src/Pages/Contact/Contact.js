@@ -22,6 +22,7 @@ const ContactPage = () => {
     subject: "",
     message: "",
   });
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   useEffect(() => {
     setAnimate(true);
@@ -29,11 +30,65 @@ const ContactPage = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    if (name === "email" && value && !emailPattern.test(value)) {
+      setSnackbarMessage("Please enter a valid email address");
+      setSnackbarSeverity("error");
+      setOpenSnackbar(true);
+    } else {
+      setSnackbarMessage("");
+      setSnackbarSeverity("");
+      setOpenSnackbar(false);
+    }
+
+    if (name === "subject" && value.split(" ").length > 50) {
+      setSnackbarMessage("Subject cannot be more than 50 words");
+      setSnackbarSeverity("error");
+      setOpenSnackbar(true);
+      return;
+    }
+
+    if (name === "message" && value.split(" ").length > 200) {
+      setSnackbarMessage("Message cannot be more than 200 words");
+      setSnackbarSeverity("error");
+      setOpenSnackbar(true);
+      return;
+    }
+
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!formData.name) {
+      setSnackbarMessage("Name is required");
+      setSnackbarSeverity("error");
+      setOpenSnackbar(true);
+      return;
+    }
+
+    if (!formData.email || !emailPattern.test(formData.email)) {
+      setSnackbarMessage("Please enter a valid email address");
+      setSnackbarSeverity("error");
+      setOpenSnackbar(true);
+      return;
+    }
+
+    if (formData.subject.split(" ").length > 50) {
+      setSnackbarMessage("Subject cannot be more than 50 words");
+      setSnackbarSeverity("error");
+      setOpenSnackbar(true);
+      return;
+    }
+
+    if (formData.message.split(" ").length > 200) {
+      setSnackbarMessage("Message cannot be more than 200 words");
+      setSnackbarSeverity("error");
+      setOpenSnackbar(true);
+      return;
+    }
+
     setLoading(true);
     try {
       const res = await axios.post(

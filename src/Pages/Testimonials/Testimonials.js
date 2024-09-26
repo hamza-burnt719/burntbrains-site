@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TestimonialCard from "./TestimonialCard";
 
-const Clients = () => {
+const Testimonials = () => {
   const settings = {
     infinite: true,
     speed: 500,
@@ -61,4 +61,4 @@ const Clients = () => {
   );
 };
 
-export default Clients;
+export default Testimonials;

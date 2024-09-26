@@ -146,7 +146,7 @@ const Header = () => {
               />
             </div>
             <IconButton color="inherit" onClick={toggleDrawer(true)}>
-              <MenuIcon sx={{ fontSize: "36px" }} />
+              <MenuIcon sx={{ fontSize: "36px", color: "#FF5722" }} />
             </IconButton>
           </Box>
         </AppBar>

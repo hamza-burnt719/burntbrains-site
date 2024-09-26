@@ -12,6 +12,7 @@ import faizan from "./Assets/faizan.png";
 import tahir from "./Assets/tahir.png";
 import nouman from "./Assets/nouman.png";
 import laiba from "./Assets/laiba.png";
+import asad from "./Assets/asad.png";
 
 // Import client logos
 import accu_ranker from "./Assets/clients/accu_ranker.png";
@@ -117,7 +118,11 @@ const teamData = [
     name: "Muhammad Talha",
     position: "Associate Full Stack Developer",
   },
-
+  {
+    image: asad,
+    name: "Asad Ur Rehman",
+    position: "Power BI Developer",
+  },
   {
     image: laiba,
     name: "Laiba Aslam",
